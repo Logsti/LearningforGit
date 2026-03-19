@@ -11,11 +11,15 @@
 2. 全局配置Git所使用的邮箱和昵称
 	git config --global user.email "song971222@163.com"	%配置全局提交邮箱
 	git config --global user.name "LINKS"				%配置全局提交用户名
-3. 查看提交历史、当前文件状态
-	$ git log			%查看提交历史
-	$ git status		%查看当前文件状态
-	$ git diff Git教程.txt	%查看修改的内容
-
-	3.1修改文件后，再次提交新版本
+3. 查看提交历史、当前文件状态、提交新版本
+	3.1查看提交历史、当前文件状态
+		$ git log			%查看提交历史
+		$ git status		%查看当前文件状态
+		$ git diff Git教程.txt	%查看修改的内容（修改后的文件未提交仓库可用于查看修改的内容对比）
+	3.2修改文件后，再次提交新版本
 		$ git add .						%将修改的文件加入暂存区
 		$ git commit -m "修改内容备注"		%提交新版本
+4. 版本回退
+	4.1回退到某个版本状态（HEAD表示最新版本，HEAD^表示上一个版本，HEAD^~100表示往前100个版本）
+		$ git reset --hard HEAD^	
+（--hard参数有啥意义？--hard会回退到上个版本的已提交状态，而--soft会回退到上个版本的未提交状态，--mixed会回退到上个版本已添加但未提交的状态）
