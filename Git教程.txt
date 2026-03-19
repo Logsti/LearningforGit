@@ -11,3 +11,6 @@
 2. 全局配置Git所使用的邮箱和昵称
 	git config --global user.email "song971222@163.com"	%配置全局提交邮箱
 	git config --global user.name "LINKS"				%配置全局提交用户名
+3. 查看提交历史、当前文件状态、
+	$ git log		%查看提交历史
+	$git status		%查看当前文件状态
