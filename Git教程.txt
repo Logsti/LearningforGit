@@ -8,7 +8,7 @@ Git教程（廖雪峰的官方网站）：https://liaoxuefeng.com/books/git/time
 	1.2 创建Git可以管理的仓库
 		$ git init			%初始化一个Git仓库
 	1.3 把文件添加到仓库
-		$ git add readme.txt					%把文件添加到仓库暂存区
+		$ git add readme.txt					%把文件添加到仓库暂存区（实际不用加文件后缀）
 		$ git commit -m "wrote a readme file" 	%将文件从暂存区提交到仓库
 2. 全局配置Git所使用的邮箱和昵称
 	git config --global user.email "song971222@163.com"	%配置全局提交邮箱
@@ -45,8 +45,13 @@ Git教程（廖雪峰的官方网站）：https://liaoxuefeng.com/books/git/time
 
 	登陆github.com，选择/创建一个仓库repository（命名为LearningforGit）
 	$ git remote add origin git@github.com:Logsti/LearningforGit.git 	%在本地仓库（Git文件作为当前地址）下，绑定远程仓库
-	$ git push -u origin master	%上传代码 
+	$ git push -u origin master	%第一次上传文件
+	$ git push origin master		%后续再上传文件 
 
+	$ git remote -v			%查看当前的远程库信息
+	$ git remote rm origin	%解除与当前远程库的绑定
+
+	$ git clone git@github.com:Logsti/LearningforGit.git		%从远程库中克隆文件到本地当前文件地址
 7. 分支管理
 	6.1 创建与合并分支
 		$ git checkout -b dev	%创建并切换到dev分支
