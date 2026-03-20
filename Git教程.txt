@@ -34,3 +34,19 @@ Git教程（廖雪峰的官方网站）：https://liaoxuefeng.com/books/git/time
 		$ git rm test.txt						%删除文件test.txt
 		$ git commit -m "确认删除文件test.txt"	%确认删除文件
 		$ git checkout -- test.txt				%撤销误删除文件操作
+%---------------------------------------------------------------------------------------------------
+6. 远程仓库（https://github.com）
+	$ pwd		%显示当前文件地址
+	$ cd /c/Users/song9/Desktop/其他文件/Git		%将当前文件地址切换到要上传到远程库的文件地址
+	
+	查看用户主目录下是否有.ssh目录，以及id-rsa和id-rsa_pub这两个文件；
+	$ cat ~/.ssh/id-rsa.pub  %获取公钥id-rsa.pub；如果没有，需要先用$ ssh-keygen -t rsa -C "youremail@example.com"进行创建再查询
+	登陆github.com，在账户设置中添加SSH Keys（命名随意）
+
+	登陆github.com，选择/创建一个仓库repository（命名为LearningforGit）
+	$ git remote add origin git@github.com:Logsti/LearningforGit.git 	%在本地仓库（Git文件作为当前地址）下，绑定远程仓库
+	$ git push -u origin master	%上传代码 
+
+7. 分支管理
+	6.1 创建与合并分支
+		$ git checkout -b dev	%创建并切换到dev分支
